@@ -82,14 +82,14 @@ img {
   display: block;
 }
 
-/* .wrapper-width-md {
-  @media (min-width: map-get($breakpoints, "lg")) {
-    max-width: map-get($breakpoints, "md");
+@media (min-width: var(--lg)) {
+  .wrapper-width-md {
+    max-width: var(--md);
   }
 }
 
-.wrapper-width-xl {
-  @media (min-width: map-get($breakpoints, "xxl")) {
-    max-width: map-get($breakpoints, "xl");
+@media (min-width: var(--xxl)) {
+  .wrapper-width-xl {
+    max-width: var(--xl);
   }
-} */
+}
