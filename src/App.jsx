@@ -1,9 +1,11 @@
-import { useState } from 'react'
+import DirectoryPage from "./pages/DirectoryPage/DirectoryPage"
 
 function App() {
 
   return (
-    <div className="App">test</div>
+    <div className="app-container">
+      <DirectoryPage />
+    </div>
   )
 }
 
