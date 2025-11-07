@@ -4,7 +4,7 @@ import Directory from "../../components/Directory/Directory";
 
 const DirectoryPage = () => {
   return (
-    <div className="directory-page-container">
+    <div className="directory-page">
       <Directory directoryData={soldierLinkData} />
     </div>
   );

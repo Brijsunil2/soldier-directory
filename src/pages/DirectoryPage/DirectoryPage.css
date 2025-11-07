@@ -1,0 +1,9 @@
+.directory-page {
+  margin: 5rem 10%;
+}
+
+@media (max-width: var(--md)) {
+  .directory-page {
+    margin: 1rem;
+  }
+}

@@ -3,7 +3,7 @@ import DirectoryPage from "./pages/DirectoryPage/DirectoryPage"
 function App() {
 
   return (
-    <div className="app-container">
+    <div className="app-container wrapper-width-md wrapper-width-lg">
       <DirectoryPage />
     </div>
   )
