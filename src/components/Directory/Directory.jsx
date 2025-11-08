@@ -17,11 +17,11 @@ const Directory = ({ directoryData }) => {
           {listing.name &&
             (index === 0 ||
               data[index - 1]?.name?.charAt(0) !== listing.name.charAt(0)) && (
-              <h2
+              <h3
                 className="directory-letter-header"
               >
                 {listing.name.charAt(0)}
-              </h2>
+              </h3>
             )}
 
           <DirectoryListing listingData={listing} />
