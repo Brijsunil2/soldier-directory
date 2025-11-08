@@ -8,6 +8,8 @@ export default defineConfig(({ command, mode }) => {
     base: "/",
     server: {
       port: 3000
+    }, define: {
+      "process.env": env,
     },
   }
 })
