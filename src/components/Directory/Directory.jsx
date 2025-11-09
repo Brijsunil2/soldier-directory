@@ -14,7 +14,6 @@ const Directory = ({ directoryData }) => {
   return (
     <section className="directory">
       <div className="directory-header">
-        <h2>Soldier Directory</h2>
         <SearchBar onChangeFunc={(value) => console.log(value)} />
       </div>
       {data.map((listing, index) => (
