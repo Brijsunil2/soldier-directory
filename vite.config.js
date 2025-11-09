@@ -5,7 +5,7 @@ export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
   return {
     plugins: [react()],
-    base: "/",
+    base: "/soldier-directory/",
     server: {
       port: 3000
     }, define: {
