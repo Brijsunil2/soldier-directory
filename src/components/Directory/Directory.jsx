@@ -3,9 +3,15 @@ import "./Directory.css";
 import DirectoryListing from "./DirectoryListing";
 import { sortDirectoryByName } from "../../utils/sortByName";
 import SearchBar from "../SearchBar/SearchBar";
+import { fuzzyFilter } from "../../utils/filterSearch";
 
 const Directory = ({ directoryData }) => {
   const [data, setData] = useState(directoryData);
+
+  const handleSearchOnChange = (value) => {
+    const filteredData = fuzzyFilter(directoryData, value, ["name"]);
+    setData(filteredData);
+  };
 
   useEffect(() => {
     setData(sortDirectoryByName(directoryData));
@@ -14,7 +20,7 @@ const Directory = ({ directoryData }) => {
   return (
     <section className="directory">
       <div className="directory-header">
-        <SearchBar onChangeFunc={(value) => console.log(value)} />
+        <SearchBar onChangeFunc={handleSearchOnChange} />
       </div>
       {data.map((listing, index) => (
         <Fragment key={index}>
