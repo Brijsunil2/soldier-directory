@@ -1,0 +1,19 @@
+.letters-nav-container {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+  color: var(--color-primary);
+  justify-content: center;
+  text-decoration: underline;
+}
+
+.letters-nav-container > .letter-link {
+  font-size: 1.1rem;
+}
+
+.letters-nav-container > .letter-link:hover {
+  color: var(--color-hover);
+  transition: background-color 0.3s, color 0.3s;
+}

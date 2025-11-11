@@ -4,7 +4,7 @@ import DirectoryListing from "./DirectoryListing";
 import { sortDirectoryByName } from "../../utils/sortByName";
 import SearchBar from "../SearchBar/SearchBar";
 import { fuzzyFilter } from "../../utils/filterSearch";
-import LetterNav from "./LetterNav";
+import LetterNav from "../LetterNav/LetterNav";
 
 const Directory = ({ directoryData }) => {
   const [data, setData] = useState(sortDirectoryByName(directoryData ?? []));
@@ -34,7 +34,6 @@ const Directory = ({ directoryData }) => {
         <SearchBar onChangeFunc={handleSearchOnChange} />
         <LetterNav letters={letters} />
       </div>
-
       {data.map((listing, index) => {
         const key = listing.id ?? listing.name ?? index;
         const currentLetter = listing?.name?.charAt(0)?.toUpperCase();
