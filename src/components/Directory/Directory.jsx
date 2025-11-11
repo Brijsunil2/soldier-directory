@@ -11,7 +11,7 @@ const Directory = ({ directoryData }) => {
 
   const handleSearchOnChange = (value) => {
     const filteredData = fuzzyFilter(directoryData, value, ["name"]);
-    setData(sortDirectoryByName(filteredData ?? [])); 
+    setData(sortDirectoryByName(filteredData ?? []));
   };
 
   useEffect(() => {
@@ -34,27 +34,32 @@ const Directory = ({ directoryData }) => {
         <SearchBar onChangeFunc={handleSearchOnChange} />
         <LetterNav letters={letters} />
       </div>
-      {data.map((listing, index) => {
-        const key = listing.id ?? listing.name ?? index;
-        const currentLetter = listing?.name?.charAt(0)?.toUpperCase();
-        const prevLetter =
-          index === 0 ? null : data[index - 1]?.name?.charAt(0)?.toUpperCase();
+      <div className="directory-body">
+        {data.map((listing, index) => {
+          const key = listing.id ?? listing.name ?? index;
+          const currentLetter = listing?.name?.charAt(0)?.toUpperCase();
+          const prevLetter =
+            index === 0
+              ? null
+              : data[index - 1]?.name?.charAt(0)?.toUpperCase();
 
-        return (
-          <Fragment key={key}>
-            {listing.name && (index === 0 || prevLetter !== currentLetter) && (
-              <h3
-                id={`letter-${currentLetter}`}
-                className="directory-letter-header"
-              >
-                {currentLetter}
-              </h3>
-            )}
+          return (
+            <Fragment key={key}>
+              {listing.name &&
+                (index === 0 || prevLetter !== currentLetter) && (
+                  <h3
+                    id={`letter-${currentLetter}`}
+                    className="directory-letter-header"
+                  >
+                    {currentLetter}
+                  </h3>
+                )}
 
-            <DirectoryListing listingData={listing} />
-          </Fragment>
-        );
-      })}
+              <DirectoryListing listingData={listing} />
+            </Fragment>
+          );
+        })}
+      </div>
     </section>
   );
 };

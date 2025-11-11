@@ -1,16 +1,18 @@
-.directory {
+.directory > .directory-body {
   display: flex;
   flex-direction: column;
   padding: 1rem;
 }
 
-.directory > .directory-letter-header {
+.directory > .directory-body > .directory-letter-header {
   font-weight: 600;
   color: var(--color-primary);
   margin: 0 0.5rem;
+  align-self: center;
+  margin: 1rem 0;
 }
 
-.directory > .directory-listing {
+.directory > .directory-body > .directory-listing {
   cursor: pointer;
   margin-bottom: 0.75rem;
   background-color: var(--color-accent);
@@ -19,10 +21,10 @@
   transition: background-color 0.3s ease;
 }
 
-.directory > .directory-listing:hover {
+.directory > .directory-body > .directory-listing:hover {
   background-color: var(--color-hover);
 }
 
-.directory > .directory-listing > a > .listing-name {
+.directory > .directory-body > .directory-listing > a > .listing-name {
   font-weight: 400;
 }
