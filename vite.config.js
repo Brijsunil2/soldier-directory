@@ -9,7 +9,7 @@ export default defineConfig(({ command, mode }) => {
     server: {
       port: 3000
     }, define: {
-      "process.env": env,
+      'import.meta.env.APP_ENV': JSON.stringify(env.APP_ENV || 'development'),
     },
   }
 })
