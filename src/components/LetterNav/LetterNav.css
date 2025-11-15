@@ -4,13 +4,14 @@
   gap: 5px;
   flex-wrap: wrap;
   margin: 1rem 0;
-  color: var(--color-primary);
+  color: #fff;
   justify-content: center;
   text-decoration: underline;
 }
 
 .letters-nav-container > .letter-link {
   font-size: 1.1rem;
+  color: #fff;
 }
 
 .letters-nav-container > .letter-link:hover {
