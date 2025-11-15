@@ -2,51 +2,70 @@
   {
     "name": "John Anderson",
     "link": "https://example.com/john-anderson",
+    "serviceNumber": "425264",
+    "imageUrl": "",
     "description": "Infantry officer recognized for leadership during peacekeeping missions."
   },
   {
     "name": "Sarah Clarke",
     "link": "https://example.com/sarah-clarke",
+    "serviceNumber": "543563",
+    "imageUrl": "",
     "description": "Communications specialist who coordinated field operations."
   },
   {
     "name": "David Chen",
     "link": "https://example.com/david-chen",
+    "serviceNumber": "4563244",
+    "imageUrl": "",
     "description": "Combat engineer known for innovation in tactical logistics."
   },
   {
     "name": "Maria Lopez",
     "link": "https://example.com/maria-lopez",
+    "serviceNumber": "768532",
+    "imageUrl": "",
     "description": "Medic who provided vital support during humanitarian deployments."
   },
   {
     "name": "Daniel Moore",
     "link": "https://example.com/daniel-moore",
+    "serviceNumber": "746334",
     "description": "Rifleman commended for dedication and teamwork in field operations."
   },
   {
     "name": "Emma Patel",
     "link": "https://example.com/emma-patel",
+    "serviceNumber": "743454",
+    "imageUrl": "",
     "description": "Strategic analyst contributing to defense training and readiness programs."
   },
   {
     "name": "Alex Johnson",
     "link": "https://example.com/alex-johnson",
+    "serviceNumber": "213424",
+    "imageUrl": "",
     "description": "Reconnaissance expert known for adaptability under pressure."
   },
   {
     "name": "Noah Williams",
     "link": "https://example.com/noah-williams",
+    "serviceNumber": "896436",
+    "imageUrl": "",
     "description": "Logistics officer ensuring efficient supply chain operations."
   },
   {
     "name": "Olivia Brown",
     "link": "https://example.com/olivia-brown",
+    "serviceNumber": "7365363",
+    "imageUrl": "",
     "description": "Signals operator responsible for secure communications management."
   },
   {
     "name": "Ethan Ramirez",
     "link": "https://example.com/ethan-ramirez",
+    "serviceNumber": "634563",
+    "imageUrl": "",
     "description": "Training officer who led advanced tactical exercises for new recruits."
   }
 ]
