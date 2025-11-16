@@ -4,7 +4,7 @@
   padding: 1rem;
 }
 
-.directory > .directory-body > .directory-letter-header {
+.directory > .directory-body > .directory-letter-section .directory-letter-header {
   font-weight: 600;
   color: #fff;
   margin: 0 0.5rem;
@@ -12,13 +12,20 @@
   margin: 1rem 0;
 }
 
-.directory > .directory-body > .directory-listing {
-  cursor: pointer;
-  margin-bottom: 0.75rem;
-  background-color: #fff;
-  padding: 0.5rem;
-  border-radius: 5px;
+.directory > .directory-body > .directory-letter-section .directory-letter-listings {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  width: 100%;
   transition: background-color 0.3s ease;
+}
+
+.directory > .directory-body > .directory-letter-section .directory-listing {
+  background-color: #fff;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  min-width: 200px;
 }
 
 .directory > .directory-body > .directory-listing:hover {
@@ -27,4 +34,21 @@
 
 .directory > .directory-body > .directory-listing > a > .listing-name {
   font-weight: 400;
+}
+
+@media (max-width: 992px) {
+  .directory > .directory-body > .directory-letter-section .directory-letter-listings {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+  }
+
+  .directory > .directory-body > .directory-letter-section .directory-listing {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .directory > .directory-body > .directory-letter-section .directory-letter-listings{
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

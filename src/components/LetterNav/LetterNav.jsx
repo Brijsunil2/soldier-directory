@@ -8,7 +8,7 @@ const LetterNav = ({ letters = [] }) => {
         <a
           key={letter}
           className="letter-link"
-          href={`#letter-${letter}`}
+          href={`#letter-nav-${letter}`}
         >
           {letter}
         </a>

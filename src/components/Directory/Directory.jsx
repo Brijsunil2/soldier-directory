@@ -47,7 +47,7 @@ const Directory = ({ directoryData }) => {
       <div className="directory-body">
         {Object.entries(grouped).map(([letter, soldiers]) => (
           <section className="directory-letter-section" key={letter}>
-            <h3 className="directory-letter-header">{letter}</h3>
+            <h3 id={`letter-nav-${letter}`} className="directory-letter-header">{letter}</h3>
             <div className="directory-letter-listings">
               {soldiers.map((s) => (
                 <DirectoryListing key={s.id ?? s.name} listingData={s} />
