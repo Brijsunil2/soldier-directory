@@ -28,37 +28,33 @@ const Directory = ({ directoryData }) => {
     );
   }, [data]);
 
+  const grouped = useMemo(() => {
+    return data.reduce((acc, item) => {
+      const letter = item.name.charAt(0).toUpperCase();
+      if (!acc[letter]) acc[letter] = [];
+      acc[letter].push(item);
+      return acc;
+    }, {});
+  }, [data]);
+
   return (
     <section className="directory">
       <div className="directory-header">
         <SearchBar onChangeFunc={handleSearchOnChange} />
         <LetterNav letters={letters} />
       </div>
+
       <div className="directory-body">
-        {data.map((listing, index) => {
-          const key = listing.id ?? listing.name ?? index;
-          const currentLetter = listing?.name?.charAt(0)?.toUpperCase();
-          const prevLetter =
-            index === 0
-              ? null
-              : data[index - 1]?.name?.charAt(0)?.toUpperCase();
-
-          return (
-            <Fragment key={key}>
-              {listing.name &&
-                (index === 0 || prevLetter !== currentLetter) && (
-                  <h3
-                    id={`letter-${currentLetter}`}
-                    className="directory-letter-header"
-                  >
-                    {currentLetter}
-                  </h3>
-                )}
-
-              <DirectoryListing listingData={listing} />
-            </Fragment>
-          );
-        })}
+        {Object.entries(grouped).map(([letter, soldiers]) => (
+          <section className="directory-letter-section" key={letter}>
+            <h3 className="directory-letter-header">{letter}</h3>
+            <div className="directory-letter-listings">
+              {soldiers.map((s) => (
+                <DirectoryListing key={s.id ?? s.name} listingData={s} />
+              ))}
+            </div>
+          </section>
+        ))}
       </div>
     </section>
   );
