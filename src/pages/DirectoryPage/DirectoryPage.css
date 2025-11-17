@@ -1,9 +1,3 @@
 .directory-page {
-  margin: 5rem 20%;
-}
-
-@media (max-width: 768px) {
-  .directory-page {
-    margin: 1rem;
-  }
+  margin: 5rem 1rem;
 }
